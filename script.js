@@ -101,7 +101,7 @@ const mapReady = new Promise((resolve) => map.on("load", resolve));
 
 // Load incident data and filter by selected year
 const incidentsReady = fetch(
-  "https://jessicachuang26.github.io/GGR472-Project-SafeSteps-/data/cleaned/toronto_incidents_by_year.geojson",
+  "https://aasthasharma272.github.io/Project-SafeSteps/data/Cleaned%20Data/toronto_incidents_by_year.geojson",
 )
   .then((res) => {
     if (!res.ok) throw new Error(`Incident file failed to load: ${res.status}`);
@@ -119,7 +119,7 @@ const incidentsReady = fetch(
 
 // Load neighbourhood crime rates
 const neighbourhoodReady = fetch(
-  "https://jessicachuang26.github.io/GGR472-Project-SafeSteps-/Neighbourhood_Crime_Rates.geojson",
+  "https://aasthasharma272.github.io/Project-SafeSteps/data/Cleaned%20Data/Neighbourhood_Crime_Rates.geojson",
 )
   .then((res) => res.json())
   .then((data) => {
@@ -327,7 +327,7 @@ function initLayers() {
   if (!map.getSource("police_stations")) {
     map.addSource("police_stations", {
       type: "geojson",
-      data: "https://jessicachuang26.github.io/GGR472-Project-SafeSteps-/Construction%20Features/Police%20Facility%20Locations%20-%204326.geojson",
+      data: "https://aasthasharma272.github.io/Project-SafeSteps/data/Construction%20Features/Police%20Facility%20Locations%20-%204326.geojson",
     });
   }
 
